@@ -7,5 +7,10 @@ namespace MetricsAgent.Controllers
     [ApiController]
     public class RamMerticsController : ControllerBase
     {
+        [HttpGet("api/metrics/ram/available")]
+        public IActionResult GetRamMertics([FromRoute] TimeSpan fromTime, [FromRoute] TimeSpan toTime)
+        {
+            return Ok();
+        }
     }
 }
